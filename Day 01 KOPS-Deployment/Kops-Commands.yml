@@ -18,12 +18,12 @@ export EDITOR='/usr/bin/nano'
 
 # Create a Cluster using Kops and generate a cluster file and save it carefully and do neccessary changes
 
-kops create cluster --name=cloudvishwakarma.in \
---state=s3://cloudvishwakarma.in --zones=us-east-1a,us-east-1b \
+kops create cluster --name=hmytraders.co.uk \
+--state=s3://hmytraders.co.uk --zones=eu-west-2a,eu-west-2b \
 --node-count=2 --control-plane-count=1 --node-size=t3.medium --control-plane-size=t3.medium \
---control-plane-zones=us-east-1a --control-plane-volume-size 10 --node-volume-size 10 \
+--control-plane-zones=eu-west-2a --control-plane-volume-size 10 --node-volume-size 10 \
 --ssh-public-key ~/.ssh/id_ed25519.pub \
---dns-zone=cloudvishwakarma.in --dry-run --output yaml
+--dns-zone=hmytraders.co.uk --dry-run --output yaml
 
 
 
